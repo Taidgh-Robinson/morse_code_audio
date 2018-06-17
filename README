@@ -1,0 +1,1 @@
+A simple Python program to generate morsecode audio files. Saves the files as the SHA256.wav in a folder "clips/"
