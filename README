@@ -1,1 +1,1 @@
-A simple Python program to generate morsecode audio files. Saves the files as the SHA256.wav in a folder "clips/". SOS is saved as an example. 
+A Python program to generate morse code audio files. Saves the files named by the SHA256 of the message, as a wav format, in a folder "clips/". SOS is saved as an example. 
