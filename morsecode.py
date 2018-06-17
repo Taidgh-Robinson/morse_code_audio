@@ -77,20 +77,17 @@ def generate_audio_file(morse):
 
     new_file.export(file_name_generator(morse), format='wav')
 
+#Checks to see if the file exists before splicing togther a new one. 
 def handler(message):
     cleaned   = re.sub(r'[^a-z0-9 ]', '',message.lower())
     print(cleaned)
     morse     = message_to_morse(cleaned)
     file_name = file_name_generator(morse)
 
-    if os.path.isfile('clips/' + file_name):
-        print("ALREADY DONE")
-
-    else:
+    if not os.path.isfile('clips/' + file_name):
         generate_audio_file(morse)
         shutil.move(file_name, 'clips/'+file_name)
 
 
-handler('hello')
-handler('hell')
-handler('Hell;o')
+handler('sos')
+
